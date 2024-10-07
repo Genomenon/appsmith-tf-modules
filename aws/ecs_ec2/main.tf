@@ -243,6 +243,7 @@ resource "aws_ecs_service" "appsmith_ecs_service" {
   task_definition = aws_ecs_task_definition.ecs_task_definition.arn
   launch_type     = "EC2"
   enable_ecs_managed_tags = true
+  wait_for_steady_state = true
   desired_count   = 1
 }
 
