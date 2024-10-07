@@ -242,6 +242,7 @@ resource "aws_ecs_service" "appsmith_ecs_service" {
   cluster         = aws_ecs_cluster.main.id
   task_definition = aws_ecs_task_definition.ecs_task_definition.arn
   launch_type     = "EC2"
+  enable_ecs_managed_tags = true
   desired_count   = 1
 }
 
